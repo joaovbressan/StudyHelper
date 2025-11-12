@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c7f0794-efd0-4e2b-b94d-3abbd12fefd9" name="Changes" comment="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\DGTI\.android\avd\Pixel.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StudyHelper" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "joaovbressan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/joaovbressan/StudyHelper.git",
+    "accountId": "bed7c1c9-5b7f-40e0-95fa-e629dc33d6c6"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="35NcHStUTlxbu8oegMja6RngOcH" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Android App.app.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "C:/Users/DGTI/AndroidStudioProjects/StudyHelper2/app/src/main/java",
+    "settings.editor.selected.configurable": "vcs.log"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="com.example.studyhelper" />
+      <recent name="com.example.studyhelper.ui" />
+      <recent name="com.example.studyhelper.data.local.repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="StudyHelper.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c7f0794-efd0-4e2b-b94d-3abbd12fefd9" name="Changes" comment="" />
+      <created>1762953881849</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762953881849</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762964431891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762964431891</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762964456498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762964456498</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762964522401</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762964522401</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762964609573</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762964609573</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762964747144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762964747144</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762964950937</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762964950937</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762965042529</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762965042529</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762965112306</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762965112306</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose.">
+      <option name="closed" value="true" />
+      <created>1762965137270</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762965137270</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="d49a716a-3040-4652-ab76-ae6248e450f8" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="d49a716a-3040-4652-ab76-ae6248e450f8">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Initialize StudyHelper project structure and core features&#10;&#10;This commit introduces the initial setup for the StudyHelper Android application. It establishes the basic project structure, configures Gradle, and implements the core functionalities for managing subjects and tasks.&#10;&#10;Key changes include:&#10;&#10;- **Project Setup**:&#10;    - Added initial Android project configuration files.&#10;    - Configured Gradle with necessary dependencies for Jetpack Compose, Room, Hilt, and Navigation.&#10;    - Added standard `.gitignore` files for Android projects.&#10;&#10;- **Core Data Layer**:&#10;    - Implemented Room database with `Disciplina` (Subject) and `Tarefa` (Task) entities.&#10;    - Created DAOs (`DisciplinaDao`, `TarefaDao`) for database operations.&#10;    - Set up a `StudyRepository` to centralize data access.&#10;&#10;- **Dependency Injection**:&#10;    - Configured Hilt for dependency injection, providing the database, DAOs, and repository.&#10;    - Added `HiltAndroidApp` to the `Application` class.&#10;&#10;- **UI Implementation (Jetpack Compose)**:&#10;    - Created `MainActivity` with a `Scaffold` and a `BottomAppBar` for navigation between screens.&#10;    - Implemented three main screens:&#10;        - `DashboardScreen`: Displays statistics about tasks (RF05).&#10;        - `DisciplinaScreen`: Allows adding and listing subjects (RF01).&#10;        - `TarefaScreen`: Allows adding and listing tasks, associating them with subjects, and marking them as complete (RF02).&#10;    - Developed a `StudyViewModel` to manage UI state and interactions with the repository.&#10;&#10;- **Navigation**:&#10;    - Set up navigation between Dashboard, Disciplinas, and Tarefas screens using Jetpack Navigation Compose." />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.example.studyhelper">
+          <value>
+            <CheckInfo lastCheckTimestamp="1762955266840" />
+          </value>
+        </entry>
+        <entry key="com.example.studyhelper.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1762955266847" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
